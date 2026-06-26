@@ -83,6 +83,38 @@ Direcao visual:
 - com densidade suficiente para medicina;
 - com navegacao intuitiva em celular.
 
+### 5.1 Papel do Lovable
+
+Lovable sera usado apenas como acelerador de layout inicial e referencia visual do MVP. Ele nao e a fonte de verdade do produto, da arquitetura, das regras de negocio, da profundidade medica, da identidade visual final ou da experiencia completa.
+
+Qualquer codigo, tela, componente, texto, marca, logo, fluxo ou decisao criada pelo Lovable devera ser revisada pelo Codex e reorganizada conforme:
+
+- este plano mestre;
+- o contexto original da conversa;
+- as decisoes tomadas entre usuario e Codex;
+- a arquitetura tecnica definida no repositorio;
+- a identidade visual propria do MedCase.
+
+Se o Lovable omitir funcionalidades, simplificar conteudo medico, adicionar marca propria, criar componentes rasos ou fugir do conceito de Hospital Virtual, Codex devera corrigir e completar. O objetivo e aproveitar velocidade visual sem terceirizar a direcao do produto.
+
+### 5.2 Identidade visual propria
+
+MedCase precisa de marca propria, incluindo:
+
+- logo;
+- icone/app icon;
+- favicon;
+- paleta de cores;
+- tipografia;
+- grid e espacamento;
+- linguagem visual de cards, modais, abas e navegacao;
+- estilo de ilustracoes e imagens medicas;
+- tom de voz;
+- microinteracoes;
+- padrao de telas mobile e desktop.
+
+A identidade deve nascer do conceito "viver a medicina", com atmosfera clinica, investigativa, moderna e premium. Nao deve parecer app infantil, template generico, clone de Lovable ou painel medico sem personalidade.
+
 ## 6. Modulos principais
 
 ### 6.1 Autenticacao e acesso
@@ -655,4 +687,3 @@ Entregas:
 - O Codex deve receber os documentos completos.
 - A stack familiar do usuario deve ser preservada: PostgreSQL, Prisma, Neon, Cloudinary, Vercel, Render.
 - Alternativas melhores podem ser usadas, desde que baratas/gratuitas e justificadas.
-

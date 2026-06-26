@@ -2,6 +2,8 @@
 
 Use este prompt no Lovable para gerar a primeira base visual do MedCase. O objetivo e criar uma experiencia navegavel, bonita e mobile-first. Nao tente construir o backend completo ainda.
 
+Importante: o Lovable sera usado apenas como ponto de partida visual. Nao adicionar marca, badge, logo, favicon, assinatura ou texto do Lovable na interface final. O produto deve ter identidade propria do MedCase. O codigo gerado sera posteriormente revisado e reorganizado pelo Codex.
+
 ---
 
 Quero criar um app/site chamado MedCase.
@@ -246,4 +248,3 @@ Nao transformar em landing page de marketing. A primeira experiencia deve ser o 
 Nao simplificar demais os termos medicos. A plataforma deve impressionar estudantes de medicina pelo nivel tecnico, mas continuar intuitiva.
 
 Quero um MVP visual completo, responsivo e navegavel, preparado para depois o Codex transformar em produto real com banco de dados, autenticacao, IA e deploy.
-
