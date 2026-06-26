@@ -53,12 +53,38 @@ Tecnologias:
 Requisitos:
 
 - mobile-first;
+- experiencia app-first no celular;
 - tema escuro como padrao;
 - responsivo para desktop;
+- suporte posterior a PWA;
+- safe areas para iPhone;
 - acessibilidade basica;
 - componentes reutilizaveis;
 - estados de loading, empty, error e offline;
 - evitar telas de marketing antes da experiencia real.
+
+## 3.1 PWA e app iPhone
+
+A primeira estrategia de app sera PWA:
+
+- manifest;
+- icones;
+- favicon;
+- theme color;
+- service worker;
+- cache basico;
+- pagina offline;
+- suporte a instalacao na tela inicial do iPhone.
+
+Depois que o produto estiver validado no celular, poderemos empacotar a mesma base web com Capacitor para:
+
+- app iOS;
+- app Android;
+- testes no iPhone via Xcode;
+- distribuicao por TestFlight;
+- publicacao futura em lojas.
+
+Nao devemos iniciar pelo app nativo. Primeiro validamos produto, UX e conteudo como web/PWA.
 
 ## 4. Backend
 
@@ -264,4 +290,3 @@ Cuidados:
 - direito de exclusao;
 - logs sem dados sensiveis desnecessarios;
 - politicas claras para uso de IA.
-

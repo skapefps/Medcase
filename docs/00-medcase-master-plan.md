@@ -50,6 +50,8 @@ Ao final, uma IA preceptora explica:
 ## 4. Principios de produto
 
 - Mobile-first: o celular e a plataforma principal.
+- App-first na experiencia: mesmo quando rodar como site, deve parecer e se comportar como aplicativo.
+- Desktop acessivel: quem estuda no computador deve ter uma experiencia completa, com layout adaptado para tela grande.
 - Profundidade tecnica: termos medicos, fisiopatologia, semiologia e raciocinio clinico nao devem ser removidos.
 - Diversao pela interacao, nao pela infantilizacao.
 - Conteudo em niveis: Basico, Faculdade, Residencia e Especialista.
@@ -82,6 +84,7 @@ Direcao visual:
 - sem parecer infantil;
 - com densidade suficiente para medicina;
 - com navegacao intuitiva em celular.
+- com experiencia instalavel no iPhone via PWA e, futuramente, app empacotado.
 
 ### 5.1 Papel do Lovable
 
@@ -112,6 +115,7 @@ MedCase precisa de marca propria, incluindo:
 - tom de voz;
 - microinteracoes;
 - padrao de telas mobile e desktop.
+- estrategia de icone instalavel, splash screen, favicon e app icon.
 
 A identidade deve nascer do conceito "viver a medicina", com atmosfera clinica, investigativa, moderna e premium. Nao deve parecer app infantil, template generico, clone de Lovable ou painel medico sem personalidade.
 
@@ -461,6 +465,8 @@ Frontend:
 - Framer Motion;
 - lucide-react;
 - TanStack Query ou SWR quando necessario.
+- PWA com manifest, icons, theme color, service worker e suporte a Add to Home Screen.
+- Preparacao futura para Capacitor se decidirmos publicar app iOS/Android.
 
 Backend:
 
@@ -553,6 +559,9 @@ Entregas:
 - testes iniciais;
 - dados mockados organizados;
 - README tecnico.
+- estrutura PWA inicial;
+- app icon e favicon proprios;
+- remocao de qualquer branding do Lovable.
 
 ### Fase 3: Banco e autenticacao
 
@@ -581,6 +590,7 @@ Entregas:
 - Cloudinary;
 - pipeline de build;
 - ambientes preview e production.
+- instalacao como PWA no iPhone para testes reais.
 
 ### Fase 5: IA e simulacoes
 
@@ -594,6 +604,19 @@ Entregas:
 - limites de uso;
 - seguranca;
 - custos monitorados.
+
+### Fase 6: App iOS/Android
+
+Objetivo: transformar a experiencia web em app instalavel com caminho profissional.
+
+Ordem:
+
+1. validar primeiro como PWA no iPhone;
+2. ajustar navegacao, gestos, safe areas, teclado, offline parcial e performance;
+3. empacotar com Capacitor se fizer sentido;
+4. testar localmente no iPhone com Xcode;
+5. distribuir por TestFlight se houver conta Apple Developer;
+6. avaliar publicacao na App Store depois que produto e conteudo estiverem maduros.
 
 ## 10. APIs e dominios que o projeto devera ter
 
@@ -682,6 +705,8 @@ Entregas:
 - A profundidade deve ser de faculdade/residencia.
 - O produto deve ser divertido, mas nao infantil.
 - O celular e a plataforma principal.
+- O produto deve funcionar muito bem como site no desktop, mas a experiencia principal e de app no celular.
+- A primeira rota de app sera PWA; a rota nativa futura sera Capacitor/TestFlight/App Store.
 - O Hospital Virtual e o diferencial mais forte.
 - O Lovable deve receber um prompt menor, focado em MVP visual.
 - O Codex deve receber os documentos completos.
