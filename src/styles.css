@@ -1,0 +1,223 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * MedCase design system — dark, minimal, clinical.
+ * Inspired by Apple / Linear / Arc / Raycast.
+ * All colors in oklch. Tokens map to Tailwind utilities via @theme inline.
+ */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.9rem;
+
+  /* Dark is the only theme. */
+  --background: oklch(0.18 0.012 248);
+  --foreground: oklch(0.97 0.004 248);
+
+  --card: oklch(0.215 0.014 248);
+  --card-foreground: oklch(0.97 0.004 248);
+  --popover: oklch(0.225 0.015 248);
+  --popover-foreground: oklch(0.97 0.004 248);
+
+  --primary: oklch(0.78 0.13 184);
+  --primary-foreground: oklch(0.18 0.03 200);
+
+  --secondary: oklch(0.27 0.018 248);
+  --secondary-foreground: oklch(0.97 0.004 248);
+
+  --muted: oklch(0.26 0.016 248);
+  --muted-foreground: oklch(0.66 0.015 248);
+
+  --accent: oklch(0.7 0.14 296);
+  --accent-foreground: oklch(0.98 0.004 248);
+
+  --destructive: oklch(0.64 0.2 22);
+  --destructive-foreground: oklch(0.98 0.004 248);
+
+  --success: oklch(0.74 0.15 158);
+  --success-foreground: oklch(0.18 0.03 158);
+
+  --warning: oklch(0.8 0.14 75);
+  --warning-foreground: oklch(0.22 0.04 75);
+
+  --border: oklch(0.3 0.016 248);
+  --input: oklch(0.3 0.016 248);
+  --ring: oklch(0.78 0.13 184);
+
+  --chart-1: oklch(0.78 0.13 184);
+  --chart-2: oklch(0.7 0.14 296);
+  --chart-3: oklch(0.8 0.14 75);
+  --chart-4: oklch(0.74 0.15 158);
+  --chart-5: oklch(0.64 0.2 22);
+
+  --sidebar: oklch(0.2 0.013 248);
+  --sidebar-foreground: oklch(0.92 0.006 248);
+  --sidebar-primary: oklch(0.78 0.13 184);
+  --sidebar-primary-foreground: oklch(0.18 0.03 200);
+  --sidebar-accent: oklch(0.26 0.016 248);
+  --sidebar-accent-foreground: oklch(0.97 0.004 248);
+  --sidebar-border: oklch(0.3 0.016 248);
+  --sidebar-ring: oklch(0.78 0.13 184);
+
+  /* Effects */
+  --gradient-primary: linear-gradient(135deg, oklch(0.82 0.13 184), oklch(0.72 0.14 210));
+  --gradient-accent: linear-gradient(135deg, oklch(0.74 0.14 296), oklch(0.7 0.15 330));
+  --gradient-surface: linear-gradient(160deg, oklch(0.235 0.016 248), oklch(0.2 0.013 248));
+  --gradient-hero:
+    radial-gradient(120% 120% at 0% 0%, oklch(0.3 0.06 200 / 0.55), transparent 55%),
+    radial-gradient(120% 120% at 100% 0%, oklch(0.3 0.07 296 / 0.4), transparent 50%);
+  --shadow-glow: 0 0 0 1px oklch(0.78 0.13 184 / 0.18), 0 8px 30px -8px oklch(0.78 0.13 184 / 0.35);
+  --shadow-card: 0 1px 0 0 oklch(1 0 0 / 0.04) inset, 0 12px 30px -18px oklch(0 0 0 / 0.8);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  ::selection {
+    background: oklch(0.78 0.13 184 / 0.3);
+  }
+
+  /* Slim, subtle scrollbars */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@utility surface {
+  background-image: var(--gradient-surface);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
+}
+
+@utility text-gradient {
+  background-image: var(--gradient-primary);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility glow-ring {
+  box-shadow: var(--shadow-glow);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@keyframes med-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@utility animate-rise {
+  animation: med-rise 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes med-pulse-ring {
+  0% {
+    box-shadow: 0 0 0 0 oklch(0.78 0.13 184 / 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px oklch(0.78 0.13 184 / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 oklch(0.78 0.13 184 / 0);
+  }
+}
+
+@utility pulse-ring {
+  animation: med-pulse-ring 2s infinite;
+}
